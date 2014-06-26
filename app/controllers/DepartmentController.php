@@ -22,7 +22,7 @@ class DepartmentController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		return Department::where('parent_id', '=', $id)->with('officers')->get();
+		return Department::with('officers', 'children')->find($id);
 	}
 
 }
