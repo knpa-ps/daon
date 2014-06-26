@@ -12,5 +12,6 @@
 */
 
 Route::group(['prefix'=>'api'], function() {
-	Route::resource('departments', 'DepartmentController');
+	Route::get('departments', 'ApiController@getDepartments');
+	Route::get('officers', 'ApiController@getOfficers');
 });
