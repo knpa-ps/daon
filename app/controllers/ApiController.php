@@ -23,4 +23,11 @@ class ApiController extends \BaseController {
 		return $query->get();
 	}
 
+	public function registerGCM() {
+		$regId = Input::get('reg_id');
+
+		$user = new User;
+		$user->gcm_reg_id = $regId;
+		$user->save();
+	}
 }
