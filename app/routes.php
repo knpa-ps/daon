@@ -14,6 +14,7 @@
 Route::group(['prefix'=>'api'], function() {
 	Route::get('departments', 'ApiController@getDepartments');
 	Route::get('officers', 'ApiController@getOfficers');
-
+	
+	Route::get('check-version', 'ApiController@checkVersion');
 	Route::post('register-gcm', 'ApiController@registerGCM');
 });

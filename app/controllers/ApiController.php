@@ -30,4 +30,10 @@ class ApiController extends \BaseController {
 		$user->gcm_reg_id = $regId;
 		$user->save();
 	}
+
+	public function checkVersion() {
+
+		return Version::orderBy('code', 'desc')->take(1)->first();
+
+	}
 }
