@@ -17,4 +17,5 @@ Route::group(['prefix'=>'api'], function() {
 	
 	Route::get('check-version', 'ApiController@checkVersion');
 	Route::post('register-gcm', 'ApiController@registerGCM');
+
 });
